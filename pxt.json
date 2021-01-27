@@ -7,11 +7,10 @@
         "microphone": "*"
     },
     "files": [
-        "main.blocks",
-        "main.ts",
         "README.md",
         "keyboard.ts",
-        "segment.ts"
+        "segment.ts",
+        "main.ts"
     ],
     "testFiles": [
         "test.ts"
