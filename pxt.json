@@ -10,7 +10,7 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "custom.ts"
+        "keyboard.ts"
     ],
     "testFiles": [
         "test.ts"
