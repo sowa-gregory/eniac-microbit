@@ -7,12 +7,11 @@
 /**
  * Custom blocks
  */
-//% weight=100 color=#0fbc11 icon="\uf1b2"
 
-namespace eniac {
-  
-   
-   let key_callback:(key:number)=>void
+//% weight=200 color=#0fbc11 icon="\uf1b2"
+
+namespace eniac {   
+let key_callback:(key:number)=>void
 let BUTTONS_ID = [Button.A, Button.B]
 let NO_PRESS = 0
 let SHORT_PRESS = 1
@@ -31,9 +30,7 @@ export const BUTTON_B_LONG = 4
 function areAllButtonsReleased(): boolean {
     //  release 
     for (let i = 0; i < 2; i++) {
-        if (buttons[i] > 0) {
-            return false
-        }        
+        if (buttons[i] > 0) return false
     }
     return true
 }

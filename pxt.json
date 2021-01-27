@@ -10,7 +10,8 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "keyboard.ts"
+        "keyboard.ts",
+        "segment.ts"
     ],
     "testFiles": [
         "test.ts"
