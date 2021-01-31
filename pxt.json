@@ -9,8 +9,7 @@
     "files": [
         "README.md",
         "keyboard.ts",
-        "segment.ts",
-        "main.ts"
+        "segment.ts"
     ],
     "testFiles": [
         "test.ts"
