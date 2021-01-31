@@ -142,6 +142,20 @@ namespace eniac
             }
         }
 
+        /**
+          * directly sets value of one segment's bits 
+          *
+          * @param pos is segment number eg: 1
+          * @param value is segment value (bits) to be displayed eg: 65 
+          */
+
+        //% blockId="TM1637_showSeg" block="%tm|showSeg %pos %value"
+        //% weight=92 blockGap=8
+        //% subcategory="TM1637"
+        showSeg(pos: number, value :number) {
+                this._dat(pos, value)
+        }
+
          /**
           * directly shows array of segments values 
           * each byte is a sum of segment's bits  
