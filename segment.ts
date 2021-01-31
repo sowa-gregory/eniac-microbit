@@ -133,11 +133,13 @@ namespace eniac
         //% blockId="TM1637_showNumArray" block="%tm|showNumArray %arr %blank_pos"
         //% weight=91 blockGap=8
         //% subcategory="TM1637"
-        showNumArray(arr: number[], blank_pos:number = -1) {
+        showNumArray(arr: number[], blank_pos:number = 100) {
             while (arr.length()<4) arr.push(-1)
             for(let pos=0;pos<4;pos++)
             {
-                if(arr[pos]>=0 && arr[pos]<=9 ) 
+                if(blank_pos==pos)
+                    this._dat(pos,0)
+                else if(arr[pos]>=0 && arr[pos]<=9 ) 
                     this.showbit(arr[pos], pos)
                 else
                     this._dat(pos, 64)
