@@ -124,21 +124,23 @@ namespace eniac
           * show array of decimal numbers-
           * for each digit modulo 10 is computed, digits lower than 0 are not displayed (empty char)
           * elements at array index larger than 3 are ignored, arrays shorted than 4 are suffixed with -1 
+          * segment at blankpos is not shown
           *
           * @param arr is a 4 digits array, eg: [2,3,5,7]
+          * @param blank_pos - position of segment not to be shown (allows for segment blinking), -1 - all segments are shown, eg: 0
           */
       
-        //% blockId="TM1637_shownum" block="%tm|showNumArray %arr"
+        //% blockId="TM1637_showNumArray" block="%tm|showNumArray %arr %blank_pos"
         //% weight=91 blockGap=8
         //% subcategory="TM1637"
-        showNumArray(arr: number[]) {
+        showNumArray(arr: number[], blank_pos = -1) {
             while (arr.length()<4) arr.push(-1)
             for(let pos=0;pos<4;pos++)
             {
-                if(arr[pos]<0) this._dat(pos, 0)
-                if(arr[pos]>9) this._dat(pos,64)
+                if(arr[pos]>=0 && arr[pos]<=9 ) 
+                    this.showbit(arr[pos], pos)
                 else
-                this.showbit(arr[pos]%10,pos)
+                    this._dat(pos, 64)
             }
         }
 
