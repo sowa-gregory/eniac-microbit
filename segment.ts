@@ -133,7 +133,7 @@ namespace eniac
         //% blockId="TM1637_showNumArray" block="%tm|showNumArray %arr %blank_pos"
         //% weight=91 blockGap=8
         //% subcategory="TM1637"
-        showNumArray(arr: number[], blank_pos = -1) {
+        showNumArray(arr: number[], blank_pos:number = -1) {
             while (arr.length()<4) arr.push(-1)
             for(let pos=0;pos<4;pos++)
             {
