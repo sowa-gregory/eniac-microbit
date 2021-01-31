@@ -9,7 +9,9 @@
     "files": [
         "README.md",
         "keyboard.ts",
-        "segment.ts"
+        "segment.ts",
+        "main.py",
+        "main.ts"
     ],
     "testFiles": [
         "test.ts"
@@ -17,5 +19,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "pyprj"
 }
