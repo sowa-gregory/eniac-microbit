@@ -136,6 +136,7 @@ namespace eniac
             for(let pos=0;pos<4;pos++)
             {
                 if(arr[pos]<0) this._dat(pos, 0)
+                if(arr[pos]>10) this._dat(pos,128)
                 else
                 this.showbit(arr[pos]%10,pos)
             }
