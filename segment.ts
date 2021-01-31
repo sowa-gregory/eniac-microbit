@@ -232,13 +232,13 @@ namespace eniac
      */
     //% subcategory="TM1637"
     //% weight=200 blockGap=8
-    //% blockId="TM1637_create" block="CLK %clk|DIO %dio"
-    export function create(clk: DigitalPin=DigitalPin.P1, dio: DigitalPin=DigitalPin.P2): TM1637 {
+    //% blockId="createTM1637" block="CLK %clk|DIO %dio"
+    export function createTM1637(clk: DigitalPin=DigitalPin.P1, dio: DigitalPin=DigitalPin.P2): TM1637 {
         let tm = new TM1637();
         tm.clk = clk;
         tm.dio = dio;
         tm.count = LED_COUNT
-        tm.brightness = 8
+        tm.brightness = 7
         tm.init();
         return tm;
     }
